@@ -15,14 +15,21 @@
 const average = (arrayNumero) => {
   // add your implementation here
   let soma = 0;
-  
+  // let resultadoMedia = soma / arrayNumero.length;
+    
+  if (arrayNumero.length === 0) {
+    return undefined;
+  }
+
   for (let i = 0; i < arrayNumero.length; i += 1) {
-    if (typeof arrayNumero[i] !== 'number' || arrayNumero[i] === ' ') { // array vazio e aproximacao
-      soma = 'undefined';
+    if (typeof arrayNumero[i] !== 'number') { // array vazio e aproximacao
+      return undefined;
     }
     soma += arrayNumero[i];
   }
-  return soma / arrayNumero.length;
+  return Math.round(soma / arrayNumero.length);
 };
+
+// console.log(average([3, 4, 5]));
 
 module.exports = average;
