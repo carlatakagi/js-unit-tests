@@ -21,13 +21,14 @@ const average = (arrayNumero) => {
     return undefined;
   }
 
+  // for que percorre o array
   for (let i = 0; i < arrayNumero.length; i += 1) {
     if (typeof arrayNumero[i] !== 'number') { // array vazio e aproximacao
       return undefined;
     }
     soma += arrayNumero[i];
   }
-  return Math.round(soma / arrayNumero.length);
+  return Math.round(soma / arrayNumero.length); // retorna valor aproximado
 };
 
 // console.log(average([3, 4, 5]));

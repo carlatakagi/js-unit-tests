@@ -15,7 +15,7 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = (student) => ({
+const createStudent = (student) => ({ // func ja chama o objeto e dentro do objeto chama uma funcao que imprime a string
   name: student,
   feedback: () => 'Eita pessoa boa!', // tem que ter uma funcao que retorna a string ok
 });

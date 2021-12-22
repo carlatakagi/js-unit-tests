@@ -29,16 +29,18 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
     expect(circle('não é número')).toBe(undefined);
     // Teste se circle retorna um objeto.
-    expect(circle).toBe(circle);
+    expect(typeof circle(13)).toBe('object');
     // Teste se o objeto retornado tem 3 propriedades.
-
+    expect(circle(13)).toHaveProperty('radius', 'area', 'circumference');
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
     expect(circle()).toBe(undefined);
-    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    
-    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    
+    // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2. { radius: 2, area: 12.56, circumference: 12.56 }
+    // metodo .toHaveProperty para acessar chave e valor de objeto https://jestjs.io/pt-BR/docs/expect#tohavepropertykeypath-value
+    expect(circle(2)).toHaveProperty('circumference', 12.56);
+    // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3. - { radius: 3, area: 28.259999999999998, circumference: 18.84 }
+    expect(circle(3)).toHaveProperty('area', 28.259999999999998);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    fail('Teste vazio!');
+    expect(circle(3)).toEqual({radius: 3, area: 28.259999999999998, circumference: 18.84});
+    // fail('Teste vazio!');
   });
 });

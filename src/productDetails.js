@@ -38,5 +38,6 @@ const productDetails = (firstProduct, secondProduct) => [
     },
   },
 ];
+console.log(productDetails('oculos', 'livro'));
 
 module.exports = productDetails;

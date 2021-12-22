@@ -18,6 +18,7 @@
 
 const myCounter = () => {
   var myArray = [];
+  // apenas muda o nome da variavel para que percorra primeiro e depois o segundo
   for (var index = 0; index <= 3; index += 1) {
     myArray.push(index);
     for (var counter = 2; counter <= 3; counter += 1) {
@@ -27,4 +28,5 @@ const myCounter = () => {
   return myArray;
 };
 
+console.log(myCounter());
 module.exports = myCounter;

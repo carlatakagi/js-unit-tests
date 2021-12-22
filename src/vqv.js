@@ -22,9 +22,11 @@ Tenho ${age} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
 
+  // se nao existe nam e age irá retornar undefined
   if (!name && !age) {
     return undefined;
   }
+  // quando existe, retorna a frase
   return frase;
 };
 

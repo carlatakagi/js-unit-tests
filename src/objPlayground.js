@@ -34,6 +34,7 @@
 */
 
 const calculator = (number1, number2) => ({
+  // faz a operação matematica e aproxima para o menor
   sum: Math.floor(number1 + number2),
   mult: Math.floor(number1 * number2),
   div: Math.floor(number1 / number2),
@@ -41,8 +42,12 @@ const calculator = (number1, number2) => ({
 });
 console.log(calculator(1, 3));
 
+// função que converta objetos em arrays, de chaves, valores ou ambos
 const arrayGenerator = (type, object) => {
-  
 };
+
+console.log(arrayGenerator('keys', { sum: 4, mult: 3, div: 0, sub: -2 }));
+console.log(arrayGenerator('values', { sum: 4, mult: 3, div: 0, sub: -2 }));
+console.log(arrayGenerator('entries', { sum: 4, mult: 3, div: 0, sub: -2 }));
 
 module.exports = { calculator, arrayGenerator };
