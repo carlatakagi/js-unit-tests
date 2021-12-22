@@ -15,7 +15,6 @@
 const average = (arrayNumero) => {
   // add your implementation here
   let soma = 0;
-  // let resultadoMedia = soma / arrayNumero.length;
     
   if (arrayNumero.length === 0) {
     return undefined;
@@ -23,9 +22,11 @@ const average = (arrayNumero) => {
 
   // for que percorre o array
   for (let i = 0; i < arrayNumero.length; i += 1) {
+    // se o tipo do array na posição i for diferente de number, retorna undefined
     if (typeof arrayNumero[i] !== 'number') { // array vazio e aproximacao
       return undefined;
     }
+    // se for number, soma a variavel soma com o numero na posicao que estiver o array
     soma += arrayNumero[i];
   }
   return Math.round(soma / arrayNumero.length); // retorna valor aproximado

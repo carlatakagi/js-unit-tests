@@ -44,6 +44,18 @@ console.log(calculator(1, 3));
 
 // função que converta objetos em arrays, de chaves, valores ou ambos
 const arrayGenerator = (type, object) => {
+  // se type for igual ao par da array
+  if (type === 'entries') {
+    return Object.entries(object);
+  }
+  // se o type for igual as chaves
+  if (type === 'keys') {
+    return Object.keys(object);
+  }
+  // se o type for igual a valores
+  if (type === 'values') {
+    return Object.values(object);
+  }
 };
 
 console.log(arrayGenerator('keys', { sum: 4, mult: 3, div: 0, sub: -2 }));
